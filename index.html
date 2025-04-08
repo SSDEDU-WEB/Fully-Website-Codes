@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Us</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
     (function() {
@@ -31,121 +30,113 @@
     };
   </script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+    /* Integrating the shared CSS */
+    .contact_us_8 * {
+      font-family: Nunito, sans-serif;
     }
 
-    nav {
-      background-color: #4CAF50;
-      padding: 1rem;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: space-around;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 2rem;
+    .contact_us_8 .container-block.form-wrapper {
       background-color: white;
-      border-radius: 10px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
+      max-width: 610px;
       text-align: center;
-      color: #4CAF50;
+      padding: 50px 40px;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
+      border-radius: 6px;
+      margin: 50px auto;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+    .contact_us_8 .text-blk.contactus-head {
+      font-size: 36px;
+      line-height: 45px;
+      font-weight: 900;
+      margin-bottom: 20px;
     }
 
-    label {
-      font-weight: bold;
+    .contact_us_8 input, .contact_us_8 textarea, .contact_us_8 select {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      border: 2px solid #eeeeee;
+      border-radius: 64px;
+      margin-bottom: 20px;
     }
 
-    input, textarea, select, button {
-      font-size: 1rem;
-      padding: 0.5rem;
-      border-radius: 5px;
-      border: 1px solid #ddd;
-    }
-
-    input:focus, textarea:focus, select:focus {
-      outline: 2px solid #4CAF50;
-    }
-
-    button {
-      background-color: #4CAF50;
+    .contact_us_8 button {
+      width: 100%;
+      background-color: #03a9f4;
+      height: 50px;
+      font-size: 18px;
+      font-weight: 700;
       color: white;
       border: none;
+      border-radius: 64px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
 
-    button:hover {
-      background-color: #45a049;
+    .contact_us_8 .right-side-text {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      max-width: 363px;
+      width: 100%;
+      background-color: rgba(151, 220, 250, 0.44);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
     }
 
-    textarea {
-      resize: none;
+    .contact_us_8 .right-side-text p {
+      margin: 10px 0;
+    }
+
+    .contact_us_8 .social-media-links {
+      display: flex;
+      justify-content: space-evenly;
+      width: 200px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <main>
-    <h1>Contact Us</h1>
-    <form id="contactForm">
-      <label for="name">Your Name</label>
-      <input type="text" name="name" id="name" placeholder="Your Name" required>
+  <main class="contact_us_8">
+    <div class="container-block form-wrapper">
+      <h1 class="text-blk contactus-head">Contact Us</h1>
+      <form id="contactForm">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" placeholder="Your Name" required>
 
-      <label for="email">Your Email</label>
-      <input type="email" name="email" id="email" placeholder="Your Email" required>
+        <label for="email">Your Email</label>
+        <input type="email" name="email" id="email" placeholder="Your Email" required>
 
-      <label for="phone">Your Phone Number</label>
-      <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required>
+        <label for="phone">Your Phone Number</label>
+        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required>
 
-      <label for="type">Who are you?</label>
-      <select name="type" id="type" required>
-        <option value="Student">Student</option>
-        <option value="Teacher">Teacher</option>
-        <option value="Parent">Parent</option>
-        <option value="Guest">Guest</option>
-      </select>
+        <label for="type">Who are you?</label>
+        <select name="type" id="type" required>
+          <option value="Student">Student</option>
+          <option value="Teacher">Teacher</option>
+          <option value="Parent">Parent</option>
+          <option value="Guest">Guest</option>
+        </select>
 
-      <label for="title">Subject</label>
-      <input type="text" name="title" id="title" placeholder="Subject" required>
+        <label for="title">Subject</label>
+        <input type="text" name="title" id="title" placeholder="Subject" required>
 
-      <label for="message">Your Message</label>
-      <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+        <label for="message">Your Message</label>
+        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
 
-      <button type="submit">Send</button>
-    </form>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div class="right-side-text">
+      <p>Email: N/A</p>
+      <p>Phone number: N/A</p>
+      <p>Address: N/A</p>
+    </div>
   </main>
 </body>
 </html>
